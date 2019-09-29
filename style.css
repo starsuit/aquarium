@@ -1,0 +1,150 @@
+body {
+  height: 100vh;
+  background-color: #42a1c6;
+  background-image: url("./seaweed.svg");
+  background-repeat-y: no-repeat;
+  background-position-y: bottom;
+  background-size: 50vh;
+}
+
+.card {
+  background-color: beige;
+  box-shadow: 10px 10px 27px -15px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  margin: 0 20vw;
+  padding: 2rem;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+}
+
+.fish {
+  width: 30vw;
+  height: 20vw;
+  animation: swim 4s infinite linear;
+}
+
+.crab {
+  width: 20vw;
+  height: 20vw;
+  position: absolute;
+  bottom: 0;
+  right: 10vw;
+  animation: scuttle 6s infinite linear;
+}
+
+.seaweed-1 {
+  fill: green;
+  height: 20vh;
+}
+
+.bubbles {
+  position: absolute;
+  bottom: 0;
+  z-index: 5;
+  margin-right: 10vw;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.5;
+  width: 8vw;
+  height: 8vw;
+  animation: up 4s infinite;
+}
+
+.bubble-2 {
+  left: 35%;
+  animation: up 2s infinite;
+}
+
+.bubble-3 {
+  left: 75%;
+  opacity: 0.3;
+  animation: up 5s infinite;
+}
+
+.bubble-4 {
+  left: 98%;
+  animation: up 6s infinite;
+}
+
+.bubble-5 {
+  left: 5%;
+  animation: up 5s infinite;
+}
+
+.bubble-6 {
+  left: 30%;
+  opacity: 0.3;
+  animation: up 3s infinite;
+}
+
+.bubble-7 {
+  left: 60%;
+  animation: up 4s infinite;
+}
+
+.bubble-8 {
+  left: 90%;
+  opacity: 0.3;
+  animation: up 3s infinite;
+}
+
+/* Swim Animation */
+@keyframes swim {
+  0% {
+    transform: translateY(-10vh) translateX(-20vw) rotate(30deg);
+  }
+  25% {
+    transform: translateY(10vh) translateX(25vw) rotate(20deg);
+  }
+  50% {
+    transform: translateY(20vh) translateX(50vw);
+  }
+  75% {
+    transform: translateY(10vh) translateX(85vw) rotate(-20deg);
+  }
+  100% {
+    transform: translateY(-30vh) translateX(105vw) rotate(-40deg);
+  }
+}
+
+@keyframes scuttle {
+  0% {
+    transform: translateY(0) translateX(15vw) rotate(10deg);
+  }
+  20% {
+    transform: translateY(0) translateX(-5vw) rotate(-10deg);
+  }
+  30% {
+    transform: translateY(0) translateX(-15vw) rotate(10deg);
+  }
+  40% {
+    transform: translateY(0) translateX(-30vw) rotate(-10deg);
+  }
+  50% {
+    transform: translateY(0) translateX(-40vw) rotate(10deg);
+  }
+  60% {
+    transform: translateY(0) translateX(-35vw) rotate(-10deg);
+  }
+  70% {
+    transform: translateY(0) translateX(-25vw) rotate(10deg);
+  }
+  80% {
+    transform: translateY(0) translateX(-15vw) rotate(-10deg);
+  }
+  90% {
+    transform: translateY(0) translateX(-5vw) rotate(10deg);
+  }
+  100% {
+    transform: translateY(0) translateX(15vw) rotate(-10deg);
+  }
+}
+
+/* Bubbles Animation */
+@keyframes up {
+  100% {
+    transform: translateY(-800px);
+  }
+}
